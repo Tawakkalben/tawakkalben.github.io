@@ -138,3 +138,27 @@ document.getElementById("userInput").addEventListener("keypress", function(e) {
   }
 });
 </script>
+
+<!-- CHATBOT UI -->
+<div id="chatContainer" style="position: fixed; bottom: 20px; right: 20px; width: 320px; font-family: Arial;">
+
+  <div style="background:#0a66c2; color:white; padding:12px; border-radius:12px 12px 0 0;">
+    Ask Tawakkal 😊
+  </div>
+
+  <div id="chatBox" style="background:#fff; height:320px; overflow-y:auto; padding:10px; border:1px solid #ddd;">
+    <div style="background:#f1f1f1; padding:8px; border-radius:10px;">
+      Hi 😊 Ask me anything about Tawakkal.
+    </div>
+  </div>
+
+  <div style="display:flex;">
+    <input id="userInput" type="text" placeholder="Ask something..."
+      style="flex:1; padding:10px; border:1px solid #ddd; border-top:none;" />
+    <button onclick="sendMessage()" 
+      style="background:#0a66c2; color:white; border:none; padding:10px;">
+      Send
+    </button>
+  </div>
+
+</div>
