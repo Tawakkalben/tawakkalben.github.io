@@ -45,3 +45,96 @@ document.getElementById("userInput").addEventListener("keypress", function(e) {
   }
 });
                                           </script>
+
+<script>
+const responses = {
+  who: [
+    "Tawakkal is a 3rd year MBBS student focused on becoming a thoughtful and reliable clinician 😊",
+    "He’s a medical student who values understanding medicine deeply rather than just memorising."
+  ],
+
+  study: [
+    "He studies MBBS at Kamuzu University of Health Sciences.",
+    "Currently in his 3rd year, building both theory and clinical understanding."
+  ],
+
+  location: [
+    "He’s based in Malawi, with clinical exposure in real-world healthcare settings.",
+    "Currently living and studying in Malawi."
+  ],
+
+  goals: [
+    "His main goal is to build strong clinical reasoning — understanding why symptoms connect, not just naming diseases.",
+    "He aims to become a doctor who can take complex histories and identify meaningful patterns.",
+    "More than anything, he wants to be a doctor patients trust and feel comfortable with."
+  ],
+
+  personality: [
+    "He’s naturally introverted, thoughtful and observant.",
+    "He prefers depth over noise and tends to listen more than he speaks.",
+    "Calm, reflective and focused — especially in clinical settings."
+  ],
+
+  strengths: [
+    "He’s good at connecting clinical details into a clear picture.",
+    "Strong in pattern recognition and understanding disease mechanisms.",
+    "He explains complex medical ideas in simple ways."
+  ],
+
+  weakness: [
+    "He sometimes overthinks before acting, but he’s actively working on balancing that.",
+    "Tends to carry cases mentally even after work — something he’s improving on."
+  ],
+
+  learning: [
+    "He focuses on understanding mechanisms first, then applying them clinically.",
+    "Prefers active recall and real clinical exposure over passive reading.",
+    "Believes in consistency over intensity."
+  ],
+
+  vision: [
+    "His goal is impact, not prestige.",
+    "He wants to make healthcare more understandable and human for patients.",
+    "Long-term, he hopes to contribute to local healthcare and mentor others."
+  ],
+
+  contact: [
+    "You can reach him through LinkedIn or email on this site 😊"
+  ]
+};
+
+function getResponse(input) {
+  input = input.toLowerCase();
+
+  if (input.includes("who")) return random(responses.who);
+  if (input.includes("study") || input.includes("school")) return random(responses.study);
+  if (input.includes("where") || input.includes("location")) return random(responses.location);
+  if (input.includes("goal") || input.includes("aim") || input.includes("doctor")) return random(responses.goals);
+  if (input.includes("person") || input.includes("personality") || input.includes("character")) return random(responses.personality);
+  if (input.includes("strength")) return random(responses.strengths);
+  if (input.includes("weak") || input.includes("improve")) return random(responses.weakness);
+  if (input.includes("learn") || input.includes("study method")) return random(responses.learning);
+  if (input.includes("future") || input.includes("vision")) return random(responses.vision);
+  if (input.includes("contact")) return random(responses.contact);
+
+  return "Ask me something about Tawakkal 😊 like his goals, personality, or how he approaches medicine.";
+}
+
+function random(arr) {
+  return arr[Math.floor(Math.random() * arr.length)];
+}
+
+document.getElementById("userInput").addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    let userText = this.value;
+    let response = getResponse(userText);
+
+    let chatBox = document.getElementById("chatBox");
+    chatBox.innerHTML += "<p><b>You:</b> " + userText + "</p>";
+    chatBox.innerHTML += "<p><b>Ask Tawakkal:</b> " + response + "</p>";
+
+    this.value = "";
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+});
+</script>
