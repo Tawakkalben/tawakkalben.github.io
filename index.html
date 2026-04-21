@@ -1,1 +1,47 @@
 <!DOCTYPE html><html><head>  <title>Tawakkal Benjamin</title></head><body style="font-family: Arial; margin: 0; padding: 0; background-color: #f9f9f9;">  <!-- HEADER -->  <div style="background-color: #0a66c2; color: white; padding: 50px; text-align: center;">    <h1>Tawakkal Benjamin</h1>    <p>3rd Year MBBS Student | Malawi</p>    <p>Aspiring Clinician with interests in Neurology, Cardiology & Radiology</p>    <p>      <a href="https://www.linkedin.com/in/tawakkal-benjamin-713961311" style="color:white;">LinkedIn</a> |      <a href="mailto:tawakalibenja@gmail.com" style="color:white;">Email</a>    </p>  </div>  <!-- ABOUT -->  <div style="padding: 30px;">    <h2>About Me</h2>    <p>      I am a third-year MBBS student based in Mangochi District, Malawi.       With roots in both Malawi and Mozambique, I bring a diverse background       into my journey in medicine.    </p>    <p>      I am focused on building a strong foundation in clinical knowledge and       continuously improving my understanding of disease processes and patient care.    </p>    <p>      I value personal growth, independent thinking, and maintaining strong       family connections while working toward becoming a skilled clinician.    </p>  </div>  <!-- INTERESTS -->  <div style="background-color: #ffffff; padding: 30px;">    <h2>Interests</h2>    <ul>      <li>Neurology & Neurosurgery</li>      <li>Cardiology</li>      <li>Radiology</li>      <li>Personal development and self-learning</li>      <li>Reading, films, and reflective time</li>    </ul>  </div>  <!-- EDUCATION -->  <div style="background-color: #f0f0f0; padding: 30px;">    <h2>Education</h2>    <p>      Bachelor of Medicine, Bachelor of Surgery (MBBS)<br>      Kamuzu University of Health Sciences    </p>  </div>  <!-- CONTACT -->  <div style="padding: 30px;">    <h2>Connect</h2>    <p>      <a href="https://www.instagram.com/tawakkal_benjamin">Instagram 1</a><br>      <a href="https://www.instagram.com/epicexplorer71">Instagram 2</a><br>      <a href="https://www.tiktok.com/@tawakkal_benjamin">TikTok</a><br>      <a href="https://www.facebook.com">Facebook</a>    </p>  </div></body></html>
+<!-- CHATBOT -->
+<div style="position: fixed; bottom: 20px; right: 20px; width: 250px; font-family: Arial;">
+  
+  <div style="background:#0a66c2; color:white; padding:10px; border-radius:10px 10px 0 0;">
+    Ask Tawakkal 😊
+  </div>
+
+  <div id="chatBox" style="background:white; height:200px; overflow-y:auto; padding:10px; border:1px solid #ccc;">
+    <p><b>Bot:</b> Hi 😊 Ask me about Tawakkal!</p>
+  </div>
+
+  <input id="userInput" type="text" placeholder="Type a question..."
+    style="width:100%; padding:8px; border:1px solid #ccc;" />
+
+</div>
+
+<script>
+document.getElementById("userInput").addEventListener("keypress", function(e) {
+  if (e.key === "Enter") {
+    let input = this.value.toLowerCase();
+    let response = "Sorry 😊 I can only answer questions about Tawakkal.";
+
+    if (input.includes("who")) {
+      response = "Tawakkal Benjamin is a 3rd year MBBS student from Malawi with a focus on building strong clinical knowledge.";
+    }
+    else if (input.includes("study") || input.includes("school")) {
+      response = "He studies MBBS at Kamuzu University of Health Sciences.";
+    }
+    else if (input.includes("interest")) {
+      response = "He is interested in Neurology, Neurosurgery, Cardiology and Radiology.";
+    }
+    else if (input.includes("location") || input.includes("where")) {
+      response = "He is based in Mangochi District, Malawi.";
+    }
+    else if (input.includes("contact")) {
+      response = "You can reach him via email or LinkedIn on this site 😊";
+    }
+
+    let chatBox = document.getElementById("chatBox");
+    chatBox.innerHTML += "<p><b>You:</b> " + this.value + "</p>";
+    chatBox.innerHTML += "<p><b>Bot:</b> " + response + "</p>";
+    this.value = "";
+    chatBox.scrollTop = chatBox.scrollHeight;
+  }
+});
+                                          </script>
