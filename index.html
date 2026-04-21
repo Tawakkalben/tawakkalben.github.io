@@ -1,146 +1,5 @@
 <!DOCTYPE html><html><head>  <title>Tawakkal Benjamin</title></head><body style="font-family: Arial; margin: 0; padding: 0; background-color: #f9f9f9;">  <!-- HEADER -->  <div style="background-color: #0a66c2; color: white; padding: 50px; text-align: center;">    <h1>Tawakkal Benjamin</h1>    <p>3rd Year MBBS Student | Malawi</p>    <p>Aspiring Clinician with interests in Neurology, Cardiology & Radiology</p>    <p>      <a href="https://www.linkedin.com/in/tawakkal-benjamin-713961311" style="color:white;">LinkedIn</a> |      <a href="mailto:tawakalibenja@gmail.com" style="color:white;">Email</a>    </p>  </div>  <!-- ABOUT -->  <div style="padding: 30px;">    <h2>About Me</h2>    <p>      I am a third-year MBBS student based in Mangochi District, Malawi.       With roots in both Malawi and Mozambique, I bring a diverse background       into my journey in medicine.    </p>    <p>      I am focused on building a strong foundation in clinical knowledge and       continuously improving my understanding of disease processes and patient care.    </p>    <p>      I value personal growth, independent thinking, and maintaining strong       family connections while working toward becoming a skilled clinician.    </p>  </div>  <!-- INTERESTS -->  <div style="background-color: #ffffff; padding: 30px;">    <h2>Interests</h2>    <ul>      <li>Neurology & Neurosurgery</li>      <li>Cardiology</li>      <li>Radiology</li>      <li>Personal development and self-learning</li>      <li>Reading, films, and reflective time</li>    </ul>  </div>  <!-- EDUCATION -->  <div style="background-color: #f0f0f0; padding: 30px;">    <h2>Education</h2>    <p>      Bachelor of Medicine, Bachelor of Surgery (MBBS)<br>      Kamuzu University of Health Sciences    </p>  </div>  <!-- CONTACT -->  <div style="padding: 30px;">    <h2>Connect</h2>    <p>      <a href="https://www.instagram.com/tawakkal_benjamin">Instagram 1</a><br>      <a href="https://www.instagram.com/epicexplorer71">Instagram 2</a><br>      <a href="https://www.tiktok.com/@tawakkal_benjamin">TikTok</a><br>      <a href="https://www.facebook.com">Facebook</a>    </p>  </div></body></html>
-
-<!-- CHATBOT -->
-<div style="position: fixed; bottom: 20px; right: 20px; width: 250px; font-family: Arial;">
-  
-  <div style="background:#0a66c2; color:white; padding:10px; border-radius:10px 10px 0 0;">
-    Ask Tawakkal 😊
-  </div>
-
-  <div id="chatBox" style="background:white; height:200px; overflow-y:auto; padding:10px; border:1px solid #ccc;">
-    <p><b>Bot:</b> Hi 😊 Ask me about Tawakkal!</p>
-  </div>
-
-  <input id="userInput" type="text" placeholder="Type a question..."
-    style="width:100%; padding:8px; border:1px solid #ccc;" />
-
-</div>
-
-<script>
-document.getElementById("userInput").addEventListener("keypress", function(e) {
-  if (e.key === "Enter") {
-    let input = this.value.toLowerCase();
-    let response = "Sorry 😊 I can only answer questions about Tawakkal.";
-
-    if (input.includes("who")) {
-      response = "Tawakkal Benjamin is a 3rd year MBBS student from Malawi with a focus on building strong clinical knowledge.";
-    }
-    else if (input.includes("study") || input.includes("school")) {
-      response = "He studies MBBS at Kamuzu University of Health Sciences.";
-    }
-    else if (input.includes("interest")) {
-      response = "He is interested in Neurology, Neurosurgery, Cardiology and Radiology.";
-    }
-    else if (input.includes("location") || input.includes("where")) {
-      response = "He is based in Mangochi District, Malawi.";
-    }
-    else if (input.includes("contact")) {
-      response = "You can reach him via email or LinkedIn on this site 😊";
-    }
-
-    let chatBox = document.getElementById("chatBox");
-    chatBox.innerHTML += "<p><b>You:</b> " + this.value + "</p>";
-    chatBox.innerHTML += "<p><b>Bot:</b> " + response + "</p>";
-    this.value = "";
-    chatBox.scrollTop = chatBox.scrollHeight;
-  }
-});
-                                          </script>
-
-<script>
-const responses = {
-  who: [
-    "Tawakkal is a 3rd year MBBS student focused on becoming a thoughtful and reliable clinician 😊",
-    "He’s a medical student who values understanding medicine deeply rather than just memorising."
-  ],
-
-  study: [
-    "He studies MBBS at Kamuzu University of Health Sciences.",
-    "Currently in his 3rd year, building both theory and clinical understanding."
-  ],
-
-  location: [
-    "He’s based in Malawi, with clinical exposure in real-world healthcare settings.",
-    "Currently living and studying in Malawi."
-  ],
-
-  goals: [
-    "His main goal is to build strong clinical reasoning — understanding why symptoms connect, not just naming diseases.",
-    "He aims to become a doctor who can take complex histories and identify meaningful patterns.",
-    "More than anything, he wants to be a doctor patients trust and feel comfortable with."
-  ],
-
-  personality: [
-    "He’s naturally introverted, thoughtful and observant.",
-    "He prefers depth over noise and tends to listen more than he speaks.",
-    "Calm, reflective and focused — especially in clinical settings."
-  ],
-
-  strengths: [
-    "He’s good at connecting clinical details into a clear picture.",
-    "Strong in pattern recognition and understanding disease mechanisms.",
-    "He explains complex medical ideas in simple ways."
-  ],
-
-  weakness: [
-    "He sometimes overthinks before acting, but he’s actively working on balancing that.",
-    "Tends to carry cases mentally even after work — something he’s improving on."
-  ],
-
-  learning: [
-    "He focuses on understanding mechanisms first, then applying them clinically.",
-    "Prefers active recall and real clinical exposure over passive reading.",
-    "Believes in consistency over intensity."
-  ],
-
-  vision: [
-    "His goal is impact, not prestige.",
-    "He wants to make healthcare more understandable and human for patients.",
-    "Long-term, he hopes to contribute to local healthcare and mentor others."
-  ],
-
-  contact: [
-    "You can reach him through LinkedIn or email on this site 😊"
-  ]
-};
-
-function getResponse(input) {
-  input = input.toLowerCase();
-
-  if (input.includes("who")) return random(responses.who);
-  if (input.includes("study") || input.includes("school")) return random(responses.study);
-  if (input.includes("where") || input.includes("location")) return random(responses.location);
-  if (input.includes("goal") || input.includes("aim") || input.includes("doctor")) return random(responses.goals);
-  if (input.includes("person") || input.includes("personality") || input.includes("character")) return random(responses.personality);
-  if (input.includes("strength")) return random(responses.strengths);
-  if (input.includes("weak") || input.includes("improve")) return random(responses.weakness);
-  if (input.includes("learn") || input.includes("study method")) return random(responses.learning);
-  if (input.includes("future") || input.includes("vision")) return random(responses.vision);
-  if (input.includes("contact")) return random(responses.contact);
-
-  return "Ask me something about Tawakkal 😊 like his goals, personality, or how he approaches medicine.";
-}
-
-function random(arr) {
-  return arr[Math.floor(Math.random() * arr.length)];
-}
-
-document.getElementById("userInput").addEventListener("keypress", function(e) {
-  if (e.key === "Enter") {
-    let userText = this.value;
-    let response = getResponse(userText);
-
-    let chatBox = document.getElementById("chatBox");
-    chatBox.innerHTML += "<p><b>You:</b> " + userText + "</p>";
-    chatBox.innerHTML += "<p><b>Ask Tawakkal:</b> " + response + "</p>";
-
-    this.value = "";
-    chatBox.scrollTop = chatBox.scrollHeight;
-  }
-});
-</script>
-
-<!-- CHATBOT UI -->
+<!-- ELITE CHATBOT -->
 <div id="chatContainer" style="position: fixed; bottom: 20px; right: 20px; width: 320px; font-family: Arial;">
 
   <div style="background:#0a66c2; color:white; padding:12px; border-radius:12px 12px 0 0;">
@@ -162,4 +21,54 @@ document.getElementById("userInput").addEventListener("keypress", function(e) {
     </button>
   </div>
 
-</div></body></html>
+</div>
+
+<script>
+const knowledge = [
+  { keywords: ["who","about"], responses: ["Tawakkal is a 3rd year MBBS student focused on clinical reasoning 😊","He’s a thoughtful medical student building deep understanding."] },
+  { keywords: ["study","school"], responses: ["He studies MBBS at Kamuzu University of Health Sciences."] },
+  { keywords: ["where","location","live"], responses: ["He is based in Mangochi District, Malawi."] },
+  { keywords: ["goal","doctor","future"], responses: ["He aims to become a doctor who understands patterns, not just diagnoses."] },
+  { keywords: ["interest"], responses: ["He’s interested in Neurology, Cardiology, Neurosurgery and Radiology."] },
+  { keywords: ["person","personality"], responses: ["He is calm, reflective and naturally introverted."] },
+  { keywords: ["strength"], responses: ["He is strong in pattern recognition and explaining complex ideas simply."] },
+  { keywords: ["weak","improve"], responses: ["He sometimes overthinks but is improving balance and decision-making."] },
+  { keywords: ["contact"], responses: ["You can reach him via LinkedIn or email on this site 😊"] }
+];
+
+function getResponse(input){
+  input=input.toLowerCase();
+  for(let item of knowledge){
+    for(let word of item.keywords){
+      if(input.includes(word)) return item.responses[Math.floor(Math.random()*item.responses.length)];
+    }
+  }
+  return "Ask me about Tawakkal 😊 (goals, studies, personality)";
+}
+
+function sendMessage(){
+  let inputField=document.getElementById("userInput");
+  let text=inputField.value.trim();
+  if(!text) return;
+
+  let chatBox=document.getElementById("chatBox");
+
+  chatBox.innerHTML+=`<div style="text-align:right;margin:8px;"><div style="background:#0a66c2;color:white;padding:8px;border-radius:10px;">${text}</div></div>`;
+
+  let reply=getResponse(text);
+
+  setTimeout(()=>{
+    chatBox.innerHTML+=`<div style="text-align:left;margin:8px;"><div style="background:#f1f1f1;padding:8px;border-radius:10px;">${reply}</div></div>`;
+    chatBox.scrollTop=chatBox.scrollHeight;
+  },400);
+
+  inputField.value="";
+}
+
+document.getElementById("userInput").addEventListener("keypress",function(e){
+  if(e.key==="Enter") sendMessage();
+});
+</script>
+
+</body>
+</html>
